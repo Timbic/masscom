@@ -1,0 +1,64 @@
+{
+	"name": "masscom",
+	"type": "module",
+	"version": "0.0.1",
+	"description": "<YOUR PACKAGE DESCRIPTION>",
+	"author": "Timur Bikmuhametov <tim.bic22@gmail.com>",
+	"license": "MIT",
+	"keywords": [
+		"KEYWORD1",
+		"KEYWORD2"
+	],
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Timbic/masscom.git"
+	},
+	"exports": {
+		".": "./dist/index.js"
+	},
+	"main": "./dist/index.js",
+	"bin": {
+		"masscom": "index.js"
+	},
+	"files": [
+		"dist",
+		"index.js"
+	],
+	"engines": {
+		"node": ">=22.22.0"
+	},
+	"publishConfig": {
+		"access": "public"
+	},
+	"scripts": {
+		"dev": "tsdown --watch",
+		"build": "tsdown",
+		"execute": "node index.js",
+		"fmt": "prettier --cache --write .",
+		"fmt:chk": "prettier --check .",
+		"lint": "eslint --cache",
+		"lint:fix": "eslint --cache --fix",
+		"typecheck": "tsc --noEmit",
+		"release": "bumpp",
+		"prepare": "husky"
+	},
+	"devDependencies": {
+		"@timbic/eslint-config": "1.2.1",
+		"@timbic/prettier-config": "1.2.2",
+		"@types/node": "26.5.1",
+		"bumpp": "12.3.0",
+		"eslint": "10.10.0",
+		"husky": "9.1.7",
+		"lint-staged": "17.5.1",
+		"prettier": "3.9.6",
+		"tsdown": "0.23.0",
+		"typescript": "6.0.3"
+	},
+	"lint-staged": {
+		"*/**/*.{js,ts,md,json}": [
+			"pnpm fmt",
+			"pnpm lint:fix"
+		]
+	},
+	"packageManager": "pnpm@11.24.0"
+}
