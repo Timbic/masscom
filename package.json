@@ -2,12 +2,15 @@
 	"name": "masscom",
 	"type": "module",
 	"version": "0.0.1",
-	"description": "<YOUR PACKAGE DESCRIPTION>",
+	"description": "Run a shell command in every immediate subdirectory of the current directory",
 	"author": "Timur Bikmuhametov <tim.bic22@gmail.com>",
 	"license": "MIT",
 	"keywords": [
-		"KEYWORD1",
-		"KEYWORD2"
+		"cli",
+		"subdirectory",
+		"batch",
+		"run-command",
+		"mass-command"
 	],
 	"repository": {
 		"type": "git",
