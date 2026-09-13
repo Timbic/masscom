@@ -1,7 +1,7 @@
 {
 	"name": "masscom",
 	"type": "module",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Run a shell command in every immediate subdirectory of the current directory",
 	"author": "Timur Bikmuhametov <tim.bic22@gmail.com>",
 	"license": "MIT",
