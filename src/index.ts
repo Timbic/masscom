@@ -41,12 +41,15 @@ async function init() {
 	for (const entry of fs.readdirSync(cwd)) {
 		const full = path.join(cwd, entry);
 		if (fs.statSync(full).isDirectory()) {
-			process.chdir(full);
-			console.log(`Running in ${full}`);
+			try {
+				process.chdir(full);
+				console.log(`Running in ${full}`);
 
-			cp.execSync(command, { stdio: "inherit" });
-
-			process.chdir(cwd);
+				cp.execSync(command, { stdio: "inherit" });
+				process.chdir(cwd);
+			} catch (e) {
+				console.error(e);
+			}
 		}
 	}
 }
