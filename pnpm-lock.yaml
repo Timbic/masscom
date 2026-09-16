@@ -167,14 +167,14 @@ importers:
   .:
     devDependencies:
       '@timbic/eslint-config':
-        specifier: 1.2.1
-        version: 1.2.1(eslint@10.10.0(jiti@2.7.0))(typescript@6.0.3)
-      '@timbic/prettier-config':
         specifier: 1.2.2
-        version: 1.2.2(prettier@3.9.6)
+        version: 1.2.2(eslint@10.10.0(jiti@2.7.0))(typescript@6.0.3)
+      '@timbic/prettier-config':
+        specifier: 1.2.3
+        version: 1.2.3(prettier@3.9.6)
       '@types/node':
-        specifier: 26.5.1
-        version: 26.5.1
+        specifier: 26.6.0
+        version: 26.6.0
       bumpp:
         specifier: 12.3.0
         version: 12.3.0
@@ -390,13 +390,13 @@ packages:
   '@rolldown/pluginutils@1.0.1':
     resolution: {integrity: sha512-2j9bGt5Jh8hj+vPtgzPtl72j0yRxHAyumoo6TNfAjsLB04UtpSvPbPcDcBMxz7n+9CYB0c1GxQFxYRg2jimqGw==}
 
-  '@timbic/eslint-config@1.2.1':
-    resolution: {integrity: sha512-exlZdz1JlXWiZrp4DJomISbEVVjrYpUAl8dR37cxUe3mFiBF/eHYwDPN3mnkjOcayXjHdtcD4C1ap1yfkprZGQ==}
+  '@timbic/eslint-config@1.2.2':
+    resolution: {integrity: sha512-MD+vsVjUo6NqBn6mIeWWmK3YCeSkpEAF6z0B11LSJkJC7h974Gt+4hf5XUX9HAL5Ty1ltxbBtUx3nZqxG3YiLw==}
     peerDependencies:
       eslint: ^9.0.0 || ^10.0.0
 
-  '@timbic/prettier-config@1.2.2':
-    resolution: {integrity: sha512-Zh58NKaV7iJtFyIChtv+iESafP8wRdGcSDPEi2P7vNgMqm0cHCVsOem0MsStwIYCbREt2wCH2CfQ+rqkYoZjmw==}
+  '@timbic/prettier-config@1.2.3':
+    resolution: {integrity: sha512-BhCUSCX3IYsHhQ4sIDp6rj3wsBK/cNUlQCTCGHRznM4M3LlhkUvsUWBtGWt7/LpK0PzGrPN85akrJp+6gXWHEQ==}
     peerDependencies:
       prettier: ^3.0.0
 
@@ -409,8 +409,8 @@ packages:
   '@types/json-schema@7.0.15':
     resolution: {integrity: sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==}
 
-  '@types/node@26.5.1':
-    resolution: {integrity: sha512-CzNm2FezW4VR/LjG6yUdiEgLE/rAQ9Slj5gCu/C2VrdcW7I0ahNZ8DRbHT7zOZ6r3ONgd/bsQIeSaoDGrd1C6g==}
+  '@types/node@26.6.0':
+    resolution: {integrity: sha512-FWWQhDlKSnEJVe+CTJCQL8Fol7s1MKo3Ud0fjryxoOoH+hwMIPxol0MguYrLi2I0VvIFwOU2DwdWET2+px15qg==}
 
   '@typescript-eslint/eslint-plugin@8.70.0':
     resolution: {integrity: sha512-/v8HZt6RlyIZxB3ntehELOcUcfxKPVGWXnQdJuHRmzrqgF8nQypcC/oxGW+Ot4VGKDq81XugPKxx0n5PBtf9PA==}
@@ -1192,7 +1192,7 @@ snapshots:
 
   '@rolldown/pluginutils@1.0.1': {}
 
-  '@timbic/eslint-config@1.2.1(eslint@10.10.0(jiti@2.7.0))(typescript@6.0.3)':
+  '@timbic/eslint-config@1.2.2(eslint@10.10.0(jiti@2.7.0))(typescript@6.0.3)':
     dependencies:
       '@eslint/js': 10.0.1(eslint@10.10.0(jiti@2.7.0))
       '@typescript-eslint/eslint-plugin': 8.70.0(@typescript-eslint/parser@8.70.0(eslint@10.10.0(jiti@2.7.0))(typescript@6.0.3))(eslint@10.10.0(jiti@2.7.0))(typescript@6.0.3)
@@ -1205,7 +1205,7 @@ snapshots:
       - supports-color
       - typescript
 
-  '@timbic/prettier-config@1.2.2(prettier@3.9.6)':
+  '@timbic/prettier-config@1.2.3(prettier@3.9.6)':
     dependencies:
       prettier: 3.9.6
 
@@ -1215,7 +1215,7 @@ snapshots:
 
   '@types/json-schema@7.0.15': {}
 
-  '@types/node@26.5.1':
+  '@types/node@26.6.0':
     dependencies:
       undici-types: 8.9.0
 
