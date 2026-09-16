@@ -48,7 +48,7 @@ async function init() {
 				cp.execSync(command, { stdio: "inherit" });
 				process.chdir(cwd);
 			} catch (e) {
-				console.error(e);
+				console.error(e instanceof Error ? e.message : e);
 			}
 		}
 	}
