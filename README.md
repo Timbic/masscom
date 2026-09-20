@@ -21,8 +21,8 @@ npm install -g masscom
 masscom [OPTION]... [COMMAND]
 ```
 
-`masscom` loops over the immediate subdirectories of the current directory, changes into each one, and runs the given command with the
-working directory set to that subdirectory.
+`masscom` loops over the subdirectories of the current directory, changes into each one, and runs the given command with the working
+directory set to that subdirectory. By default only **immediate** subdirectories are visited; use `--level` to recurse deeper.
 
 ```bash
 # Run tests in every subproject
@@ -34,13 +34,14 @@ masscom "git status"
 
 ## Options
 
-| Option         | Description              |
-| -------------- | ------------------------ |
-| `-h`, `--help` | Display the help message |
+| Option          | Description                                              |
+| --------------- | -------------------------------------------------------- |
+| `-h`, `--help`  | Display the help message                                 |
+| `-l`, `--level` | Run the command up to this many levels deep (default: 1) |
 
 ## How it works
 
-- Only **immediate** subdirectories are visited, the walk is not recursive. (for now...)
+- With `--level` (or `-l`), the walk recurses up to that many levels deep into every subdirectory tree.
 - The command is executed once per directory via a shell, with the subdirectory as the working directory.
 - Non-directory entries and the current directory itself are skipped.
 
