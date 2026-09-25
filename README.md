@@ -34,14 +34,17 @@ masscom "git status"
 
 ## Options
 
-| Option          | Description                                              |
-| --------------- | -------------------------------------------------------- |
-| `-h`, `--help`  | Display the help message                                 |
-| `-l`, `--level` | Run the command up to this many levels deep (default: 1) |
+| Option                   | Description                                                    |
+| ------------------------ | -------------------------------------------------------------- |
+| `-h`, `--help`           | Display the help message                                       |
+| `-l`, `--level`          | Run the command up to this many levels deep (default: 1)       |
+| `-i`, `--ignore <names>` | Skip directories with these names, comma-separated or repeated |
 
 ## How it works
 
 - With `--level` (or `-l`), the walk recurses up to that many levels deep into every subdirectory tree.
+- With `--ignore` (or `-i`), matching directory names are skipped at every level. Ignored directories are not recursed into.
+- `.git` and `node_modules` are always skipped, in addition to anything passed via `--ignore`.
 - The command is executed once per directory via a shell, with the subdirectory as the working directory.
 - Non-directory entries and the current directory itself are skipped.
 
