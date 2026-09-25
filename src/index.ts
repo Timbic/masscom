@@ -14,6 +14,8 @@ Options:
   -l, --level <number>                  run the command up to this many levels deep (default: 1)
   -i, --ignore <string | string[]>      skip directories with these names, comma-separated or repeated
 
+.git and node_modules are always skipped.
+
 Examples:
   masscom "npm test"
   masscom "git status" --level 2 
@@ -31,10 +33,12 @@ const args = mri<{
 	alias: { h: "help", l: "level", i: "ignore" },
 });
 
+const defaultIgnore = [".git", "node_modules"];
+
 function parseIgnore(value: string | string[] | undefined): Set<string> {
-	const values = value === undefined ? [] : Array.isArray(value) ? value : [value];
+	const values = Array.isArray(value) ? value : value === undefined ? [] : [value];
 	return new Set(
-		values
+		[...defaultIgnore, ...values]
 			.flatMap((item) => item.split(","))
 			.map((name) => name.trim())
 			.filter(Boolean),
