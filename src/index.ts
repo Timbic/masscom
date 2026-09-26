@@ -70,20 +70,19 @@ async function init() {
 			if (ignore.has(entry)) continue;
 
 			const full = path.join(cwd, entry);
-			if (fs.statSync(full).isDirectory()) {
-				try {
-					process.chdir(full);
-					console.log(`Running in ${full}`);
+			if (!fs.statSync(full).isDirectory()) continue;
 
-					cp.execSync(command, { stdio: "inherit" });
+			process.chdir(full);
+			console.log(`Running in ${full}`);
 
-					execute(full, level - 1);
-
-					process.chdir(cwd);
-				} catch (e) {
-					console.error(e instanceof Error ? e.message : e);
-				}
+			try {
+				cp.execSync(command, { stdio: "inherit" });
+			} catch (e) {
+				console.error(e instanceof Error ? e.message : e);
 			}
+
+			execute(full, level - 1);
+			process.chdir(cwd);
 		}
 	}
 
