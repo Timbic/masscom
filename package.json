@@ -46,7 +46,7 @@
 		"prepare": "husky"
 	},
 	"devDependencies": {
-		"@timbic/eslint-config": "1.2.2",
+		"@timbic/eslint-config": "1.2.3",
 		"@timbic/prettier-config": "1.2.4",
 		"@types/node": "26.6.6",
 		"bumpp": "12.3.0",
@@ -54,7 +54,7 @@
 		"husky": "9.1.7",
 		"lint-staged": "17.6.0",
 		"mri": "1.2.0",
-		"prettier": "3.9.10",
+		"prettier": "3.10.1",
 		"tsdown": "0.23.7",
 		"typescript": "6.0.3"
 	},
