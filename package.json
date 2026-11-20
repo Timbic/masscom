@@ -47,7 +47,7 @@
 	},
 	"devDependencies": {
 		"@timbic/eslint-config": "1.2.3",
-		"@timbic/prettier-config": "1.2.4",
+		"@timbic/prettier-config": "2.0.4",
 		"@types/node": "26.6.6",
 		"bumpp": "12.3.0",
 		"eslint": "10.14.0",
